@@ -10,6 +10,7 @@ import Typography from "@mui/material/Typography";
 
 // Icons
 import CloseIcon from "@mui/icons-material/Close";
+import { useRef } from "react";
 
 export const VideoPlayer = ({
   onCLick,
@@ -23,7 +24,6 @@ export const VideoPlayer = ({
   playing?: boolean;
 }) => {
   const muiTheme = useTheme();
-
   return (
     <Box
       sx={{

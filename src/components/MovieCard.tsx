@@ -76,7 +76,7 @@ export const MovieCard = ({ movie }: { movie: Movie }) => {
         >
           {movie.title}
         </Typography>
-        <Rating name="read-only" value={2} readOnly sx={{ marginY: 1 }} />
+        <Rating name="read-only" value={4} readOnly sx={{ marginY: 1 }} />
       </CardContent>
       <CardActions
         disableSpacing

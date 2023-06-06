@@ -129,20 +129,23 @@ export const MovieCarousel = () => {
         }}
       >
         <Box
+          component={"ul"}
           sx={{
             display: "flex",
             alignItems: "center",
-            overflowX: "hidden",
+            overflowX: { xs: "scroll", sm: "hidden" },
             scrollBehavior: "smooth",
             gap: 2,
             height: "auto",
             paddingY: 2,
+            listStyle: "none",
           }}
           ref={containerRef}
         >
           {movieList.length === 0
             ? Array.from({ length: 7 }).map((_, idx) => (
                 <Skeleton
+                  component={"li"}
                   key={idx}
                   variant="rounded"
                   sx={{

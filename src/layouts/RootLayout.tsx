@@ -7,7 +7,11 @@ export const RootLayout = () => {
   return (
     <>
       <Navbar />
-      <Container maxWidth="xl">
+      <Container
+        component={"main"}
+        maxWidth="xl"
+        sx={{ padding: { xs: 1, sm: 2 } }}
+      >
         <Outlet />
       </Container>
       <Footer />

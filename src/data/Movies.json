@@ -27,7 +27,7 @@
     "title": "Black Adam",
     "releaseDate": "2022-10-19",
     "trailerLink": "https://www.youtube.com/watch?v=JaV7mmc9HGw",
-    "genres": ["Fantasy", "Action", "Science Fiction"],
+    "genres": ["Fantasy", "Action", "Fiction"],
     "poster": "https://image.tmdb.org/t/p/w500/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg",
     "backdrops": [
       "https://image.tmdb.org/t/p/original/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg",
@@ -49,7 +49,7 @@
     "title": "Avatar: The Way of Water",
     "releaseDate": "2022-12-16",
     "trailerLink": "https://www.youtube.com/watch?v=d9MyW72ELq0",
-    "genres": ["Science Fiction", "Action", "Adventure"],
+    "genres": ["Fiction", "Action", "Adventure"],
     "poster": "https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
     "backdrops": [
       "https://image.tmdb.org/t/p/original/s16H6tpK2utvwDtzZ8Qy4qm5Emw.jpg",
@@ -79,7 +79,7 @@
     "title": "Puss in Boots: The Last Wish",
     "releaseDate": "2022-12-21",
     "trailerLink": "https://www.youtube.com/watch?v=tHb7WlgyaUc",
-    "genres": ["Animation", "Action", "Adventure", "Comedy", "Family"],
+    "genres": ["Action", "Adventure", "Comedy", "Family"],
     "poster": "https://image.tmdb.org/t/p/w500/1NqwE6LP9IEdOZ57NCT51ftHtWT.jpg",
     "backdrops": [
       "https://image.tmdb.org/t/p/original/r9PkFnRUIthgBp2JZZzD380MWZy.jpg",
@@ -101,7 +101,7 @@
     "title": "Avatar",
     "releaseDate": "2009-12-15",
     "trailerLink": "https://www.youtube.com/watch?v=5PSNL1qE6VY",
-    "genres": ["Fantasy", "Action", "Science Fiction", "Adventure"],
+    "genres": ["Fantasy", "Action", "Fiction", "Adventure"],
     "poster": "https://image.tmdb.org/t/p/w500/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg",
     "backdrops": [
       "https://image.tmdb.org/t/p/original/o0s4XsEDfDlvit5pDRKjzXR4pp2.jpg",
@@ -123,7 +123,7 @@
     "title": "Strange World",
     "releaseDate": "2022-11-23",
     "trailerLink": "https://www.youtube.com/watch?v=bKh2G73gCCs",
-    "genres": ["Family", "Adventure", "Science Fiction", "Animation"],
+    "genres": ["Family", "Adventure", "Fiction", "Animation"],
     "poster": "https://image.tmdb.org/t/p/w500/kgJ8bX3zDQDM2Idkleis28XSVnu.jpg",
     "backdrops": [
       "https://image.tmdb.org/t/p/original/5wDBVictj4wUYZ31gR5WzCM9dLD.jpg",
@@ -167,7 +167,7 @@
     "title": "Black Panther: Wakanda Forever",
     "releaseDate": "2022-11-11",
     "trailerLink": "https://www.youtube.com/watch?v=_Z3QKkl1WyM",
-    "genres": ["Action", "Adventure", "Science Fiction"],
+    "genres": ["Action", "Adventure", "Fiction"],
     "poster": "https://image.tmdb.org/t/p/w500/cryEN3sWlgB2wTzcUNVtDGI8bkM.jpg",
     "backdrops": [
       "https://image.tmdb.org/t/p/original/yYrvN5WFeGYjJnRzhY0QXuo4Isw.jpg",
@@ -189,7 +189,7 @@
     "title": "M3GAN",
     "releaseDate": "2023-01-06",
     "trailerLink": "https://www.youtube.com/watch?v=BRb4U99OU80",
-    "genres": ["Science Fiction", "Horror", "Comedy"],
+    "genres": ["Fiction", "Horror", "Comedy"],
     "poster": "https://image.tmdb.org/t/p/w500/xBl5AGw7HXZcv1nNXPlzGgO4Cfo.jpg",
     "backdrops": [
       "https://image.tmdb.org/t/p/original/5kAGbi9MFAobQTVfK4kWPnIfnP0.jpg",

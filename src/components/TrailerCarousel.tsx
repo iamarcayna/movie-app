@@ -86,14 +86,13 @@ export const TrailerCarousel = ({
         <Carousel
           fullHeightHover={false}
           animation="slide"
-          navButtonsAlwaysVisible
           indicators={false}
-          duration={700}
-          NavButton={({ onClick, next, prev }) => {
+          duration={400}
+          NavButton={({ onClick }) => {
             return (
               <>
-                {next && <CarouselButton onCLick={onClick} />}
-                {prev && <CarouselButton isBackButton onCLick={onClick} />}
+                <CarouselButton onCLick={onClick} />
+                <CarouselButton isBackButton onCLick={onClick} />
               </>
             );
           }}

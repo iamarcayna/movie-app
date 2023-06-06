@@ -1,5 +1,5 @@
 // Hooks
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 // Components
 import { MovieCarousel } from "../components/MovieCarousel";
@@ -12,13 +12,8 @@ export const MoviePage = () => {
   const [playTrailer, setPlayTrailer] = useState<boolean>(false);
   const [trailerId, setTrailerId] = useState<string>("");
   const [activePlaying, setActivePlaying] = useState<string>("");
-  const playListRef = useRef<HTMLDivElement[]>([]);
 
-  const handleMovieClicked = (
-    youtubeId: string,
-    movieId: string,
-    index: number
-  ): void => {
+  const handleMovieClicked = (youtubeId: string, movieId: string): void => {
     if (activePlaying !== "") {
       document.getElementById(activePlaying)?.classList.remove("playing");
     }
@@ -26,7 +21,7 @@ export const MoviePage = () => {
     document.getElementById(movieId)?.classList.add("playing");
     setPlayTrailer(true);
     setTrailerId(youtubeId);
-    playListRef.current[index].scrollIntoView({ block: "nearest" });
+    window.scrollTo({ top: 0 });
   };
 
   const handleClose = (): void => {
@@ -46,7 +41,7 @@ export const MoviePage = () => {
         )}
       </Grid>
       <Grid item xs={16} md={6} lg={5}>
-        <UpNextList onCLick={handleMovieClicked} playListRef={playListRef} />
+        <UpNextList onCLick={handleMovieClicked} />
       </Grid>
       <Grid item xs={16} md={10} lg={11}>
         <MovieCarousel />

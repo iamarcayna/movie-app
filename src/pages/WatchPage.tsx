@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import MoviesList from "../data/Movies.json";
 import { MovieCard } from "../components/MovieCard";
+import Skeleton from "@mui/material/Skeleton";
 
 export const WatchPage = () => {
   const [movieList, setMovieList] = useState<Movie[]>([]);
@@ -50,16 +51,46 @@ export const WatchPage = () => {
   };
 
   return (
-    <Grid container marginY={{ xs: 2, md: 5 }}>
-      {movieList.length === 0 ? (
-        <Button>Empty</Button>
-      ) : (
-        movieList.map((movie, index) => (
-          <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-            <MovieCard movie={movie} />
-          </Grid>
-        ))
-      )}
+    <Grid
+      component={"ul"}
+      container
+      marginY={{ xs: 1, sm: 2, md: 5 }}
+      sx={{ listStyle: "none" }}
+    >
+      {movieList.length === 0
+        ? Array.from({ length: 10 }).map((_, index) => (
+            <Grid
+              component={"li"}
+              key={index}
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              lg={3}
+            >
+              <Skeleton
+                variant="rounded"
+                sx={{
+                  margin: 1,
+                  padding: 0,
+                  height: { xs: 330, md: 280, lg: 305 },
+                }}
+              />
+            </Grid>
+          ))
+        : movieList.map((movie, index) => (
+            <Grid
+              component={"li"}
+              key={index}
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              lg={3}
+            >
+              <MovieCard movie={movie} />
+            </Grid>
+          ))}
     </Grid>
   );
 };

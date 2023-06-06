@@ -25,7 +25,7 @@ export const CarouselButton = ({
         height: 80,
         transition: "background 200ms ease",
         fontSize: "2em",
-        display: isVisible ? "grid" : "none",
+        display: { xs: "none", sm: isVisible ? "grid" : "none" },
         "&:hover": {
           backgroundColor: "rgba(35,35,35,0.8) !important",
           color: "gold",

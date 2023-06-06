@@ -9,7 +9,7 @@ export const MovieThumbNail = ({ movie }: { movie: Movie }) => {
   const muiTheme = useTheme();
   const navigate = useNavigate();
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box component={"li"} sx={{ position: "relative" }}>
       <PosterCard
         title={movie.title}
         poster={movie.poster}

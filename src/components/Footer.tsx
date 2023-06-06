@@ -30,7 +30,7 @@ export const Footer = () => {
   ];
 
   return (
-    <Container maxWidth="xl" sx={{ marginTop: 5 }}>
+    <Container component={"footer"} maxWidth="xl" sx={{ marginTop: 5 }}>
       <Box
         sx={{
           display: "flex",

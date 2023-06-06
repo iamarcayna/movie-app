@@ -9,10 +9,8 @@ import MoviesList from "../data/Movies.json";
 
 export const UpNextList = ({
   onCLick,
-  playListRef,
 }: {
   onCLick: (youtubeId: string, movieId: string, index: number) => void;
-  playListRef: React.MutableRefObject<HTMLDivElement[]>;
 }) => {
   const [movieList, setMovieList] = useState<Movie[]>([]);
   /*
@@ -57,7 +55,7 @@ export const UpNextList = ({
       sx={{
         boxShadow: "0 0 1px gray",
         borderRadius: "0.5rem",
-        marginTop: 2,
+        marginTop: { xs: 4, sm: 2 },
         marginLeft: { xs: 0, md: 2 },
         paddingBottom: 2,
       }}
@@ -66,6 +64,7 @@ export const UpNextList = ({
         Playlist
       </Typography>
       <Box
+        component={"ul"}
         sx={{
           height: {
             xs: 450,
@@ -74,16 +73,17 @@ export const UpNextList = ({
           },
           overflowY: "scroll",
           overflowX: "hidden",
-          paddingX: "1rem",
+          paddingX: { xs: 0.5, sm: 2 },
           paddingY: "0.5rem",
           marginRight: 1,
           scrollBehavior: "smooth",
+          listStyle: "none",
         }}
-        ref={playListRef}
       >
         {movieList.length === 0
           ? Array.from({ length: 7 }).map((_, idx) => (
               <Box
+                component={"li"}
                 key={idx}
                 sx={{
                   borderRadius: "0.5rem",
@@ -105,14 +105,24 @@ export const UpNextList = ({
                   sx={{
                     height: "100%",
                     borderRadius: "0.3rem",
-                    flex: "0 0 150px",
+                    flex: {
+                      xs: "0 0 100px",
+                      sm: "0 0 150px",
+                      md: "0 0 100px",
+                      xl: "0 0 150px",
+                    },
                   }}
                 />
                 <Box
                   sx={{
                     flex: "1 1 100%",
                     height: "100%",
-                    width: "calc(100% - 150px)",
+                    width: {
+                      xs: "calc(100% - 100px)",
+                      sm: "calc(100% - 150px)",
+                      md: "calc(100% - 100px)",
+                      xl: "calc(100% - 150px)",
+                    },
                     paddingLeft: 1.5,
                     paddingBottom: 1,
                   }}
@@ -137,10 +147,10 @@ export const UpNextList = ({
                   />
                   <Box
                     sx={{
-                      overflow: { xs: "hidden", md: "scroll", xl: "hidden" },
+                      overflow: "hidden",
                       display: "flex",
                       alignItems: "flex-start",
-                      flexWrap: { xs: "wrap", md: "nowrap", xl: "wrap" },
+                      flexWrap: "wrap",
                       height: "auto",
                       width: "100%",
                       gap: 1,
@@ -177,12 +187,10 @@ export const UpNextList = ({
             ))
           : movieList.map((movie, index) => (
               <Box
-                ref={(ref: HTMLDivElement) =>
-                  ref && (playListRef.current[index] = ref)
-                }
                 onClick={() =>
                   onCLick(movie.trailerLink.slice(-13), movie.imdbId, index)
                 }
+                component={"li"}
                 id={movie.imdbId}
                 key={index}
                 sx={{
@@ -209,14 +217,24 @@ export const UpNextList = ({
                     backgroundRepeat: "no-repeat",
                     height: "100%",
                     borderRadius: "0.3rem",
-                    flex: "0 0 150px",
+                    flex: {
+                      xs: "0 0 100px",
+                      sm: "0 0 150px",
+                      md: "0 0 100px",
+                      xl: "0 0 150px",
+                    },
                   }}
                 />
                 <Box
                   sx={{
                     flex: "1 1 100%",
                     height: "100%",
-                    width: "calc(100% - 150px)",
+                    width: {
+                      xs: "calc(100% - 100px)",
+                      sm: "calc(100% - 150px)",
+                      md: "calc(100% - 100px)",
+                      xl: "calc(100% - 150px)",
+                    },
                     paddingLeft: 1.5,
                     paddingBottom: 1,
                   }}
@@ -229,11 +247,11 @@ export const UpNextList = ({
                   </Typography>
                   <Box
                     sx={{
-                      overflow: { xs: "hidden", md: "scroll", xl: "hidden" },
+                      overflow: "hidden",
                       display: "flex",
                       alignItems: "flex-start",
-                      flexWrap: { xs: "wrap", md: "nowrap", xl: "wrap" },
-                      height: "auto",
+                      flexWrap: "wrap",
+                      height: 60,
                       width: "100%",
                       gap: 1,
                       marginTop: 0.5,

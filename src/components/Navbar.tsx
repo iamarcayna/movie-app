@@ -47,20 +47,22 @@ export const Navbar = () => {
       enableColorOnDark
       sx={{ background: "rgba(30,30,30,0.5)" }}
     >
-      <Container maxWidth="xl">
+      <Container component={"nav"} maxWidth="xl">
         <Drawer
+          color="background"
           variant="temporary"
           sx={{
             display: { xs: "block", md: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: { xs: "70%", sm: 350 },
+              background: "rgb(25,25,25)",
             },
           }}
           open={openDrawer}
           onClose={() => setOpenDrawer(false)}
         >
-          <NavDrawer />
+          <NavDrawer onClose={() => setOpenDrawer(false)} />
         </Drawer>
         <FlexBox sx={{ paddingY: 1.5 }}>
           <IconButton
@@ -106,10 +108,10 @@ export const Navbar = () => {
               sx={{ display: { xs: "block", sm: "none", md: "flex" }, gap: 2 }}
             >
               <NavLink className="nav-link" to={"/"}>
-                Movies
+                <Typography variant="body1">Movies</Typography>
               </NavLink>
               <NavLink className="nav-link" to={"watch"}>
-                Watch
+                <Typography variant="body1">Watch</Typography>
               </NavLink>
             </FlexBox>
           </FlexBox>
@@ -140,7 +142,7 @@ export const Navbar = () => {
             variant="contained"
             color="secondary"
           >
-            Sign Up
+            Sign Out
           </Button>
         </FlexBox>
       </Container>
