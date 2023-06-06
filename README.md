@@ -11,7 +11,7 @@ The Movie Application offers the following features:
 2. Rate Movies: Users have the ability to rate movies based on their personal opinions and preferences. This feature enables users to share their thoughts and contribute to the movie's overall rating.
 
 ## Try It Out!
-To experience the Movie Application, you can visit the live deployment at the following URL: [https://movie-app-five-rho.vercel.app/](https://movie-app-five-rho.vercel.app/)
+To experience the Movie Application, you can visit the live deployment at the following URL: [https://movie-app-iamarcayna.vercel.app/](https://movie-app-iamarcayna.vercel.app/)
 
 Please note that an internet connection is required to access the application and its features.
 
