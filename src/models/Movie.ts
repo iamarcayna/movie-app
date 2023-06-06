@@ -6,5 +6,5 @@ export interface Movie {
   genres: string[];
   poster: string;
   backdrops: string[];
-  reviewIds: string[];
+  reviewIds: {};
 }

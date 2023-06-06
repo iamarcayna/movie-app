@@ -13,13 +13,13 @@ export const SingleMoviePage = () => {
   const navigate = useNavigate();
   const movieId = useParams();
   const [movie, setMovie] = useState<any>({});
-
+  /*
   useEffect(() => {
     fetch(`${process.env.REACT_APP_ROOT_URL}/api/v1/movies/watch/${movieId.id}`)
       .then((res) => res.json())
       .then((data: Movie) => setMovie(data))
       .catch((error) => console.error(error));
-  }, [movieId.id]);
+  }, [movieId.id]);*/
 
   return (
     <Grid container columns={16}>

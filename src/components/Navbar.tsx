@@ -18,6 +18,9 @@ import { NavLink } from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
+import { useEffect, useState } from "react";
+import Drawer from "@mui/material/Drawer";
+import { NavDrawer } from "./NavDrawer";
 
 // Custom styled components
 const FlexBox = styled(Box)(() => ({
@@ -27,10 +30,15 @@ const FlexBox = styled(Box)(() => ({
 
 export const Navbar = () => {
   const navigate = useNavigate();
-
+  const [openDrawer, setOpenDrawer] = useState(false);
   const searchMovie = (movie: string): void => {
     navigate(`search/${movie}`);
   };
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setOpenDrawer(false));
+    return window.removeEventListener("resize", () => setOpenDrawer(false));
+  });
 
   return (
     <AppBar
@@ -40,24 +48,38 @@ export const Navbar = () => {
       sx={{ background: "rgba(30,30,30,0.5)" }}
     >
       <Container maxWidth="xl">
+        <Drawer
+          variant="temporary"
+          sx={{
+            display: { xs: "block", md: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: { xs: "70%", sm: 350 },
+            },
+          }}
+          open={openDrawer}
+          onClose={() => setOpenDrawer(false)}
+        >
+          <NavDrawer />
+        </Drawer>
         <FlexBox sx={{ paddingY: 1.5 }}>
-          <FlexBox>
-            <IconButton
-              size="large"
-              color="inherit"
-              aria-label="open drawer"
-              sx={{
-                display: { md: "none" },
-                marginRight: { xs: 0, sm: 2 },
-              }}
-            >
-              <MenuIcon />
-            </IconButton>
+          <IconButton
+            size="large"
+            color="inherit"
+            aria-label="open drawer"
+            sx={{
+              display: { md: "none" },
+              marginRight: { xs: 0, sm: 2 },
+            }}
+            onClick={() => setOpenDrawer(true)}
+          >
+            <MenuIcon />
+          </IconButton>
+          <FlexBox sx={{ display: { xs: "none", sm: "flex" } }}>
             <FlexBox
               sx={{
                 marginRight: 2,
                 cursor: "pointer",
-                display: { xs: "none", sm: "flex" },
               }}
               onClick={() => navigate("/")}
             >
@@ -80,7 +102,9 @@ export const Navbar = () => {
                 Gallery
               </Typography>
             </FlexBox>
-            <FlexBox sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
+            <FlexBox
+              sx={{ display: { xs: "block", sm: "none", md: "flex" }, gap: 2 }}
+            >
               <NavLink className="nav-link" to={"/"}>
                 Movies
               </NavLink>
@@ -89,7 +113,6 @@ export const Navbar = () => {
               </NavLink>
             </FlexBox>
           </FlexBox>
-
           <SearchBar
             placeHolder="Search for movies..."
             onSearch={searchMovie}

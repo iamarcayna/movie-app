@@ -1,4 +1,5 @@
 import { Movie } from "../models/Movie";
+import MoviesList from "../data/Movies.json";
 
 // Hooks
 import { useMediaQuery, useTheme } from "@mui/material";
@@ -41,7 +42,7 @@ export const MovieCarousel = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [visibleItemCount, xsScreen]);
-
+  /*
   useEffect(() => {
     fetch(`${process.env.REACT_APP_ROOT_URL}/api/v1/movies`)
       .then((res) => res.json())
@@ -59,6 +60,23 @@ export const MovieCarousel = () => {
         setMovieList(mappedMovies);
       })
       .catch((error) => console.error(error));
+  }, []);*/
+
+  useEffect(() => {
+    // Simulate a delay in fetching data
+    setTimeout(() => {
+      const mappedMovies: Movie[] = MoviesList.map((movie) => ({
+        imdbId: movie.imdbId,
+        title: movie.title,
+        releaseDate: movie.releaseDate,
+        trailerLink: movie.trailerLink,
+        genres: movie.genres,
+        poster: movie.poster,
+        backdrops: movie.backdrops,
+        reviewIds: movie.reviewIds,
+      }));
+      setMovieList(mappedMovies);
+    }, 1000);
   }, []);
 
   const handleNext = (next: boolean) => {
@@ -114,7 +132,7 @@ export const MovieCarousel = () => {
           sx={{
             display: "flex",
             alignItems: "center",
-            overflowX: "scroll",
+            overflowX: "hidden",
             scrollBehavior: "smooth",
             gap: 2,
             height: "auto",

@@ -1,4 +1,4 @@
-import { env } from "process";
+import MoviesList from "../data/Movies.json";
 
 // Interface
 import { Movie } from "../models/Movie";
@@ -25,7 +25,7 @@ export const TrailerCarousel = ({
 }) => {
   const muiTheme = useTheme();
   const [movieList, setMovieList] = useState<Movie[]>([]);
-
+  /*
   useEffect(() => {
     fetch(`${process.env.REACT_APP_ROOT_URL}/api/v1/movies/trailers`)
       .then((res) => res.json())
@@ -43,6 +43,23 @@ export const TrailerCarousel = ({
         setMovieList(mappedMovies);
       })
       .catch((error) => console.error(error));
+  }, []);*/
+
+  useEffect(() => {
+    // Simulate a delay in fetching data
+    setTimeout(() => {
+      const mappedMovies: Movie[] = MoviesList.map((movie) => ({
+        imdbId: movie.imdbId,
+        title: movie.title,
+        releaseDate: movie.releaseDate,
+        trailerLink: movie.trailerLink,
+        genres: movie.genres,
+        poster: movie.poster,
+        backdrops: movie.backdrops,
+        reviewIds: movie.reviewIds,
+      }));
+      setMovieList(mappedMovies);
+    }, 1000);
   }, []);
 
   return (

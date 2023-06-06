@@ -5,6 +5,7 @@ import { Movie } from "../models/Movie";
 import { useState, useEffect } from "react";
 import Typography from "@mui/material/Typography";
 import Skeleton from "@mui/material/Skeleton";
+import MoviesList from "../data/Movies.json";
 
 export const UpNextList = ({
   onCLick,
@@ -14,7 +15,7 @@ export const UpNextList = ({
   playListRef: React.MutableRefObject<HTMLDivElement[]>;
 }) => {
   const [movieList, setMovieList] = useState<Movie[]>([]);
-
+  /*
   useEffect(() => {
     fetch(`${process.env.REACT_APP_ROOT_URL}/api/v1/movies/trailers`)
       .then((res) => res.json())
@@ -32,6 +33,23 @@ export const UpNextList = ({
         setMovieList(mappedMovies);
       })
       .catch((error) => console.error(error));
+  }, []);*/
+
+  useEffect(() => {
+    // Simulate a delay in fetching data
+    setTimeout(() => {
+      const mappedMovies: Movie[] = MoviesList.map((movie) => ({
+        imdbId: movie.imdbId,
+        title: movie.title,
+        releaseDate: movie.releaseDate,
+        trailerLink: movie.trailerLink,
+        genres: movie.genres,
+        poster: movie.poster,
+        backdrops: movie.backdrops,
+        reviewIds: movie.reviewIds,
+      }));
+      setMovieList(mappedMovies);
+    }, 1000);
   }, []);
 
   return (
