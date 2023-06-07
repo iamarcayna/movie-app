@@ -10,7 +10,6 @@ import Typography from "@mui/material/Typography";
 
 // Icons
 import CloseIcon from "@mui/icons-material/Close";
-import { useRef } from "react";
 
 export const VideoPlayer = ({
   onCLick,
@@ -19,7 +18,7 @@ export const VideoPlayer = ({
   playing = true,
 }: {
   onCLick: () => void;
-  trailerId: string;
+  trailerId: string | undefined;
   sx?: SxProps<Theme>;
   playing?: boolean;
 }) => {
@@ -61,7 +60,7 @@ export const VideoPlayer = ({
       </Box>
       <ReactPlayer
         id="video-player"
-        url={`https://www.youtube.com/watch?${trailerId}`}
+        url={trailerId && `https://www.youtube.com/watch?${trailerId}`}
         controls={true}
         width="100%"
         height="100%"

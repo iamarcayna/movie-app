@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { Movie } from "../models/Movie";
-import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 import MoviesList from "../data/Movies.json";
 import { MovieCard } from "../components/MovieCard";
 import Skeleton from "@mui/material/Skeleton";
@@ -32,23 +30,15 @@ export const WatchPage = () => {
   useEffect(() => {
     // Simulate a delay in fetching data
     setTimeout(() => {
-      const mappedMovies: Movie[] = MoviesList.map((movie) => ({
-        imdbId: movie.imdbId,
-        title: movie.title,
-        releaseDate: movie.releaseDate,
-        trailerLink: movie.trailerLink,
-        genres: movie.genres,
-        poster: movie.poster,
-        backdrops: movie.backdrops,
-        reviewIds: movie.reviewIds,
-      }));
-      setMovieList(mappedMovies);
+      const storedMovieList = localStorage.getItem("movieData");
+      if (storedMovieList) {
+        setMovieList(JSON.parse(storedMovieList));
+      } else {
+        setMovieList(MoviesList);
+        localStorage.setItem("movieData", JSON.stringify(MoviesList));
+      }
     }, 1000);
   }, []);
-
-  const MoreInfo = () => {
-    return <Box>Info</Box>;
-  };
 
   return (
     <Grid

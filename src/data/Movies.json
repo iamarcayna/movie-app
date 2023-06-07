@@ -19,7 +19,16 @@
       "https://image.tmdb.org/t/p/original/7zQJYV02yehWrQN6NjKsBorqUUS.jpg",
       "https://image.tmdb.org/t/p/original/rdDL4y7BxGyXFEDJgAG4lz89bG2.jpg"
     ],
-    "reviewIds": []
+    "reviewIds": [
+      {
+        "review": "The dialogue is generic -- the formal kind constructed to suit all periods -- but the actors give it all the authenticity it needs, clearly delighted by the ebullience of their characters."
+      },
+      {
+        "review": "Yes, the Woman King could be filed under wish-fulfilment, but that's true of so many action classics."
+      }
+    ],
+    "rating": 3.5,
+    "summary": "In the 1800s, a group of all-female warriors protects the African kingdom of Dahomey with skills and fierceness unlike anything the world has ever seen. Faced with a new threat, Gen. Nanisca trains the next generation of recruits to fight against a foreign enemy that's determined to destroy their way of life."
   },
   {
     "id": { "timestamp": 1684289306, "date": "2023-05-17T02:08:26.000+00:00" },
@@ -41,7 +50,22 @@
       "https://image.tmdb.org/t/p/original/9inNotReApz0n50WvWbrt0n1cbL.jpg",
       "https://image.tmdb.org/t/p/original/pSOuqtJmdh7aI1yiK7M8e0PmbPC.jpg"
     ],
-    "reviewIds": []
+    "reviewIds": [
+      {
+        "review": "Black Adam is mostly a movie made up of strictly baseline ideas, or the regurgitation of already existing ones."
+      },
+      {
+        "review": "Sabbac's late-stage introduction in Black Adam does not justify the ill timing of his arrival. It only strains an already-thin plot."
+      },
+      {
+        "review": "Maybe there was a coherent film being developed at some point, but those days are long gone.."
+      },
+      {
+        "review": "A straightforward action. It starts and it doesn't stop."
+      }
+    ],
+    "rating": 4.5,
+    "summary": "In ancient Kahndaq, Teth Adam was bestowed the almighty powers of the gods. After using these powers for vengeance, he was imprisoned, becoming Black Adam. Nearly 5,000 years have passed, and Black Adam has gone from man to myth to legend. Now free, his unique form of justice, born out of rage, is challenged by modern-day heroes who form the Justice Society: Hawkman, Dr. Fate, Atom Smasher and Cyclone."
   },
   {
     "id": { "timestamp": 1684289306, "date": "2023-05-17T02:08:26.000+00:00" },
@@ -65,13 +89,17 @@
     ],
     "reviewIds": [
       {
-        "id": {
-          "timestamp": 1684305625,
-          "date": "2023-05-17T06:40:25.000+00:00"
-        },
-        "review": "This was a really good movie"
+        "review": "We get a story this time... that part of it was great, but at 3 hours and 15 minutes, it's just too long."
+      },
+      {
+        "review": "The film's focus is split in so many directions that none of its characters feel whole, even after three full hours."
+      },
+      {
+        "review": "If you go just for the escape and spectacle, you will be in awe."
       }
-    ]
+    ],
+    "rating": 4.5,
+    "summary": "Jake Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight a difficult war against the humans."
   },
   {
     "id": { "timestamp": 1684289306, "date": "2023-05-17T02:08:26.000+00:00" },
@@ -93,7 +121,22 @@
       "https://image.tmdb.org/t/p/original/2wPJIFrBhzzAP8oHDOlShMkERH6.jpg",
       "https://image.tmdb.org/t/p/original/fnfirCEDIkxZnQEtEMMSgllm0KZ.jpg"
     ],
-    "reviewIds": []
+    "reviewIds": [
+      {
+        "review": "The Last Wish offers something different and unexpected: Puss has grown up with his audience."
+      },
+      {
+        "review": "Joel Crawford and Januel Mercado get the tone Goldilocks-right — not too scary, not too bland — and add some stylish angular slow-motion fight sequences."
+      },
+      {
+        "review": "There's an entire pick 'n' mix stand of eye candy here - more than enough to satisfy younger viewers. But alas, it's all empty calories."
+      },
+      {
+        "review": "What a time we live in where our cartoon characters can give us the space to explore mental health and the importance of leaning on our community."
+      }
+    ],
+    "rating": 4,
+    "summary": "Puss in Boots discovers that his passion for adventure has taken its toll when he learns that he has burnt through eight of his nine lives. Puss sets out on an epic journey to find the mythical Last Wish and restore his nine lives."
   },
   {
     "id": { "timestamp": 1684289306, "date": "2023-05-17T02:08:26.000+00:00" },
@@ -115,7 +158,16 @@
       "https://image.tmdb.org/t/p/original/chauy3iJaZtrMbTr72rgNmOZwo3.jpg",
       "https://image.tmdb.org/t/p/original/mYJkJ7YxJsUNI1nAOOUOpRN2auC.jpg"
     ],
-    "reviewIds": []
+    "reviewIds": [
+      {
+        "review": "Cameron and his artists have so lovingly imagined the moon of Pandora that every shot of the film contains new wonders."
+      },
+      {
+        "review": "Rewatching it with fresh eyes 10 years later, the movie's pluses and minuses both rise into much starker relief. The verdict: It's...fine."
+      }
+    ],
+    "rating": 4.5,
+    "summary": "Avatar is a media franchise created by James Cameron, which consists of a planned series of epic science fiction films produced by Lightstorm Entertainment and distributed by 20th Century Studios, as well as associated merchandise, video games and theme park attractions."
   },
   {
     "id": { "timestamp": 1684289306, "date": "2023-05-17T02:08:26.000+00:00" },
@@ -137,7 +189,16 @@
       "https://image.tmdb.org/t/p/original/3oie0kID8SNCjkqN6Raweg5dJa.jpg",
       "https://image.tmdb.org/t/p/original/zgFldVKON1Nxp8ui7HVABGKDQKM.jpg"
     ],
-    "reviewIds": []
+    "reviewIds": [
+      {
+        "review": "So much of Strange World's audaciousness is front-loaded into its concept, and so little of it comes through in the execution."
+      },
+      {
+        "review": "While not a complete failure, Strange World lacks the signature Disney magic that makes their movies stand out."
+      }
+    ],
+    "rating": 3.5,
+    "summary": "Three generations of a legendary family of explorers will find themselves in an uncharted land with strange creatures. If they want to survive from the numerous dangers, they must bridge their differences and work together."
   },
   {
     "id": { "timestamp": 1684289306, "date": "2023-05-17T02:08:26.000+00:00" },
@@ -159,7 +220,16 @@
       "https://image.tmdb.org/t/p/original/7iXsB1r9IK17ZFShqoxcHKQ7dLp.jpg",
       "https://image.tmdb.org/t/p/original/dwiRYDLcFyDOkgkSc1JFtTr6Kdk.jpg"
     ],
-    "reviewIds": []
+    "reviewIds": [
+      {
+        "review": "This is a story about the family you choose, versus the one you were born into. And for some people, the chosen family is the one that makes all the difference."
+      },
+      {
+        "review": "Matilda the Musical is a delightful revolt against parental, institutional, and educational tyranny. It is a celebration of girl power."
+      }
+    ],
+    "rating": 3,
+    "summary": "Matilda lives with her brother and parents, who are unappreciative of her. She utilises her telekinetic abilities to settle the score after her principal brutally tortures her with the help of her kind-hearted teacher."
   },
   {
     "id": { "timestamp": 1684289306, "date": "2023-05-17T02:08:26.000+00:00" },
@@ -181,7 +251,22 @@
       "https://image.tmdb.org/t/p/original/8sMmAmN2x7mBiNKEX2o0aOTozEB.jpg",
       "https://image.tmdb.org/t/p/original/geI3Mk7nehX1kvyIY3K5ajaiNfI.jpg"
     ],
-    "reviewIds": []
+    "reviewIds": [
+      {
+        "review": "The MCU's mechanics are too oppressive to allow for true mournful meditation."
+      },
+      {
+        "review": "Wow! You'll say that over and over again as this mind-blowing, superhero epic unfolds. Wow!"
+      },
+      {
+        "review": "A disappointment, especially compared to its excellent predecessor."
+      },
+      {
+        "review": "Kind of a mixed bag, but worth seeing if you liked the first one.."
+      }
+    ],
+    "rating": 4.5,
+    "summary": "Queen Ramonda, Shuri, M'Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T'Challa's death. As the Wakandans strive to embrace their next chapter, the heroes must band together with Nakia and Everett Ross to forge a new path for their beloved kingdom."
   },
   {
     "id": { "timestamp": 1684289306, "date": "2023-05-17T02:08:26.000+00:00" },
@@ -203,7 +288,19 @@
       "https://image.tmdb.org/t/p/original/txQLFd6rfQrskQhFENkS1jElptt.jpg",
       "https://image.tmdb.org/t/p/original/dC4tj1ONdlZ2TWv4XD2SA1KUnJN.jpg"
     ],
-    "reviewIds": []
+    "reviewIds": [
+      {
+        "review": "M3gan is an enjoyable horror-lite romp: knowing, amusing, but not particularly scary."
+      },
+      {
+        "review": "Sharper and more satisfying than we have any right to expect a movie like this to be."
+      },
+      {
+        "review": "Needless subplots and superfluous characters tend to distract, but when the malevolent AI is front and center, the movie really hums."
+      }
+    ],
+    "rating": 4,
+    "summary": "M3GAN is a marvel of artificial intelligence, a lifelike doll that's programmed to be a child's greatest companion and a parent's greatest ally. Designed by Gemma, a brilliant roboticist, M3GAN can listen, watch and learn as it plays the role of friend and teacher, playmate and protector. When Gemma becomes the unexpected caretaker of her 8-year-old niece, she decides to give the girl an M3GAN prototype, a decision that leads to unimaginable consequences."
   },
   {
     "id": { "timestamp": 1684289306, "date": "2023-05-17T02:08:26.000+00:00" },
@@ -225,6 +322,18 @@
       "https://image.tmdb.org/t/p/original/6jdlppcnGi3XuJamfs4Vl7HyxB.jpg",
       "https://image.tmdb.org/t/p/original/uIq83ogs7QBEWi1aqmUrdDIH61m.jpg"
     ],
-    "reviewIds": []
+    "reviewIds": [
+      {
+        "review": "“Troll” succeeds by getting back to basics. Like way, way back — all the way to the Old Norse."
+      },
+      {
+        "review": "With a perfect run time, some superb visuals, and a throughline of some brilliant mythology, Troll deserves to be watched."
+      },
+      {
+        "review": "A goofier riff on 2014's Godzilla, greatly in debt to the Roland Emmerich disaster textbook."
+      }
+    ],
+    "rating": 4.5,
+    "summary": "When an ancient troll is awakened in a Norwegian mountain, a ragtag group of heroes must come together to try and stop it from wreaking deadly havoc."
   }
 ]

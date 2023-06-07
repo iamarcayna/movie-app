@@ -6,5 +6,7 @@ export interface Movie {
   genres: string[];
   poster: string;
   backdrops: string[];
-  reviewIds: {};
+  reviewIds: any[];
+  rating: number;
+  summary: string;
 }

@@ -22,7 +22,10 @@ export const MovieThumbNail = ({ movie }: { movie: Movie }) => {
         }}
       />
       <Box
-        onClick={() => navigate(`watch/${movie.imdbId}`)}
+        onClick={() => {
+          navigate(`/watch/${movie.imdbId}`, { replace: true });
+          window.scrollTo({ top: 0 });
+        }}
         sx={{
           display: "grid",
           placeItems: "center",

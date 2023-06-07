@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import Typography from "@mui/material/Typography";
 import Skeleton from "@mui/material/Skeleton";
 import MoviesList from "../data/Movies.json";
+import moment from "moment";
 
 export const UpNextList = ({
   onCLick,
@@ -36,17 +37,13 @@ export const UpNextList = ({
   useEffect(() => {
     // Simulate a delay in fetching data
     setTimeout(() => {
-      const mappedMovies: Movie[] = MoviesList.map((movie) => ({
-        imdbId: movie.imdbId,
-        title: movie.title,
-        releaseDate: movie.releaseDate,
-        trailerLink: movie.trailerLink,
-        genres: movie.genres,
-        poster: movie.poster,
-        backdrops: movie.backdrops,
-        reviewIds: movie.reviewIds,
-      }));
-      setMovieList(mappedMovies);
+      const storedMovieList = localStorage.getItem("movieData");
+      if (storedMovieList) {
+        setMovieList(JSON.parse(storedMovieList));
+      } else {
+        setMovieList(MoviesList);
+        localStorage.setItem("movieData", JSON.stringify(MoviesList));
+      }
     }, 1000);
   }, []);
 
@@ -68,8 +65,8 @@ export const UpNextList = ({
         sx={{
           height: {
             xs: 450,
-            md: 400,
-            lg: 550,
+            md: 370,
+            lg: 520,
           },
           overflowY: "scroll",
           overflowX: "hidden",
@@ -243,7 +240,8 @@ export const UpNextList = ({
                     {movie.title}
                   </Typography>
                   <Typography noWrap variant="subtitle2" color={"gray"}>
-                    Release Date • {movie.releaseDate}
+                    Release Date •{" "}
+                    {moment(movie.releaseDate).format("MM/DD/YYYY")}
                   </Typography>
                   <Box
                     sx={{

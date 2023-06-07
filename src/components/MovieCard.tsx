@@ -14,10 +14,36 @@ import Box from "@mui/material/Box";
 import { SnackbarProvider, enqueueSnackbar } from "notistack";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
+import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
+import { styled } from "@mui/material/styles";
+import Chip from "@mui/material/Chip";
+import moment from "moment";
+
+const CustomToolTip = styled(({ className, ...props }: TooltipProps) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))(() => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: "rgb(35,35,35)",
+  },
+}));
 
 export const MovieCard = ({ movie }: { movie: Movie }) => {
   const navigate = useNavigate();
   const [collapsedInfo, setCollapsedInfo] = useState(false);
+
+  const MovieInfo = ({ movie }: { movie: Movie }) => (
+    <Box margin={1}>
+      <Typography variant="subtitle1">
+        Release Date • {moment(movie.releaseDate).format("MM/DD/YYYY")}
+      </Typography>
+      <Box display="flex" gap={1} marginTop={1} flexWrap={"wrap"}>
+        {movie.genres.map((genre, idx) => (
+          <Chip variant="outlined" label={genre} key={idx} />
+        ))}
+      </Box>
+    </Box>
+  );
 
   return (
     <Card
@@ -26,6 +52,7 @@ export const MovieCard = ({ movie }: { movie: Movie }) => {
       sx={{
         height: "auto",
         margin: 1,
+        marginX: { xs: 0, sm: 1 },
         position: "relative",
         "&:after": {
           content: `""`,
@@ -42,7 +69,7 @@ export const MovieCard = ({ movie }: { movie: Movie }) => {
         },
       }}
     >
-      <SnackbarProvider />
+      <SnackbarProvider autoHideDuration={1000} />
       <CardMedia
         image={movie.backdrops[6]}
         sx={{
@@ -76,7 +103,13 @@ export const MovieCard = ({ movie }: { movie: Movie }) => {
         >
           {movie.title}
         </Typography>
-        <Rating name="read-only" value={4} readOnly sx={{ marginY: 1 }} />
+        <Rating
+          name="read-only"
+          value={movie.rating}
+          precision={0.5}
+          readOnly
+          sx={{ marginY: 1, color: "gold" }}
+        />
       </CardContent>
       <CardActions
         disableSpacing
@@ -94,35 +127,61 @@ export const MovieCard = ({ movie }: { movie: Movie }) => {
             gap: 1,
           }}
         >
-          <IconButton
-            color="primary"
-            onClick={() => enqueueSnackbar("Added to Watchlist")}
-          >
-            <AddIcon />
-          </IconButton>
-          <Button
-            sx={{ color: "lightgray" }}
-            color="inherit"
-            onClick={() => navigate(`${movie.imdbId}`)}
-          >
-            <PlayArrowIcon />
-            <Typography
-              fontSize="1.1em"
-              textTransform="none"
-              sx={{
-                color: "lightgray",
+          <CustomToolTip title="Add to Watchlist" enterDelay={500}>
+            <IconButton
+              color="primary"
+              onClick={() =>
+                enqueueSnackbar("Added to Watchlist", {
+                  preventDuplicate: true,
+                  style: {
+                    color: "dodgerblue",
+                    fontWeight: 500,
+                  },
+                })
+              }
+            >
+              <AddIcon />
+            </IconButton>
+          </CustomToolTip>
+          <CustomToolTip title="Watch Trailer" enterDelay={500}>
+            <Button
+              sx={{ color: "lightgray" }}
+              color="inherit"
+              onClick={() => {
+                navigate(`${movie.imdbId}`);
+                window.scrollTo({ top: 0 });
               }}
             >
-              Watch
-            </Typography>
-          </Button>
+              <PlayArrowIcon />
+              <Typography
+                fontSize="1.1em"
+                textTransform="none"
+                sx={{
+                  color: "lightgray",
+                }}
+              >
+                Watch
+              </Typography>
+            </Button>
+          </CustomToolTip>
         </Box>
-        <IconButton
-          sx={{ color: "lightgray" }}
-          onClick={() => setCollapsedInfo(!collapsedInfo)}
-        >
-          <InfoOutlinedIcon />
-        </IconButton>
+        <ClickAwayListener onClickAway={() => setCollapsedInfo(false)}>
+          <CustomToolTip
+            title={<MovieInfo movie={movie} />}
+            enterDelay={500}
+            leaveDelay={600}
+            open={collapsedInfo}
+            onClose={() => setCollapsedInfo(false)}
+            placement="bottom-end"
+          >
+            <IconButton
+              sx={{ color: "lightgray" }}
+              onClick={() => setCollapsedInfo(!collapsedInfo)}
+            >
+              <InfoOutlinedIcon />
+            </IconButton>
+          </CustomToolTip>
+        </ClickAwayListener>
       </CardActions>
     </Card>
   );

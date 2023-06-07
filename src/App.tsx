@@ -11,6 +11,7 @@ import { CssBaseline, createTheme } from "@mui/material";
 import { MoviePage } from "./pages/MoviePage";
 import { SingleMoviePage } from "./pages/SingleMoviePage";
 import { WatchPage } from "./pages/WatchPage";
+import { PageNotFound } from "./pages/PageNotFound";
 
 const darkTheme = createTheme({
   palette: {
@@ -35,6 +36,8 @@ function App() {
         <Route path="watch" element={<WatchPage />} />
         <Route path="watch/:id" element={<SingleMoviePage />} />
         <Route path="search/:title" element={<SearchPage />} />
+        <Route path="404" element={<PageNotFound />} />
+        <Route path="*" element={<PageNotFound />} />
       </Route>
     )
   );
