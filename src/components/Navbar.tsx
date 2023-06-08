@@ -32,7 +32,7 @@ export const Navbar = () => {
   const navigate = useNavigate();
   const [openDrawer, setOpenDrawer] = useState(false);
   const searchMovie = (movie: string): void => {
-    navigate(`search/${movie}`);
+    navigate(`watch/search/${movie}`);
   };
 
   useEffect(() => {

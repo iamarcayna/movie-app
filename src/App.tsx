@@ -35,7 +35,7 @@ function App() {
         <Route index element={<MoviePage />} />
         <Route path="watch" element={<WatchPage />} />
         <Route path="watch/:id" element={<SingleMoviePage />} />
-        <Route path="search/:title" element={<SearchPage />} />
+        <Route path="watch/search/:title" element={<SearchPage />} />
         <Route path="404" element={<PageNotFound />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>

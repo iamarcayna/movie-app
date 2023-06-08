@@ -13,16 +13,20 @@ import { Movie } from "../models/Movie";
 import Box from "@mui/material/Box";
 import { SnackbarProvider, enqueueSnackbar } from "notistack";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
 import Chip from "@mui/material/Chip";
 import moment from "moment";
 
-const CustomToolTip = styled(({ className, ...props }: TooltipProps) => (
-  <Tooltip {...props} classes={{ popper: className }} />
-))(() => ({
+const CustomToolTip = styled(
+  forwardRef<HTMLDivElement, Omit<TooltipProps, "ref">>(
+    ({ className, ...props }, ref) => (
+      <Tooltip {...props} ref={ref} classes={{ popper: className }} />
+    )
+  )
+)(() => ({
   [`& .${tooltipClasses.tooltip}`]: {
     backgroundColor: "rgb(35,35,35)",
   },
@@ -148,7 +152,7 @@ export const MovieCard = ({ movie }: { movie: Movie }) => {
               sx={{ color: "lightgray" }}
               color="inherit"
               onClick={() => {
-                navigate(`${movie.imdbId}`);
+                navigate(`/watch/${movie.imdbId}`);
                 window.scrollTo({ top: 0 });
               }}
             >

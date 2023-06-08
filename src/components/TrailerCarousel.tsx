@@ -84,6 +84,7 @@ export const TrailerCarousel = ({
           animation="slide"
           indicators={false}
           duration={400}
+          swipe={false}
           NavButton={({ onClick }) => {
             return (
               <>

@@ -30,27 +30,21 @@ export const SingleMoviePage = () => {
   useEffect(() => {
     // Simulate a delay in fetching data
     setTimeout(() => {
-      setMovie(undefined);
       let found = false;
       const storedMovieList = localStorage.getItem("movieData");
-      if (storedMovieList) {
-        JSON.parse(storedMovieList).map((movie: Movie) => {
-          if (movie.imdbId === params.id) {
-            found = true;
-            setMovie(movie);
-          }
-          return movie;
-        });
-      } else {
+      const allMovies: Movie[] = storedMovieList
+        ? JSON.parse(storedMovieList)
+        : MoviesList;
+      if (!storedMovieList) {
         localStorage.setItem("movieData", JSON.stringify(MoviesList));
-        MoviesList.map((movie: Movie) => {
-          if (movie.imdbId === params.id) {
-            found = true;
-            setMovie(movie);
-          }
-          return movie;
-        });
       }
+      allMovies.map((movie) => {
+        if (movie.imdbId === params.id) {
+          found = true;
+          setMovie(movie);
+        }
+        return movie;
+      });
 
       if (!found) {
         navigate("404");
@@ -78,7 +72,7 @@ export const SingleMoviePage = () => {
       <Grid item xs={16} md={10} lg={11}>
         {movie ? (
           <VideoPlayer
-            onCLick={() => navigate(-1)}
+            onCLick={() => navigate("/watch/")}
             trailerId={movie.trailerLink}
             playing={false}
           />
@@ -148,6 +142,7 @@ export const SingleMoviePage = () => {
             <Box marginTop={2}>
               {Array.from({ length: 3 }).map((_, idx) => (
                 <Skeleton
+                  key={idx}
                   variant="rounded"
                   height={"0.9em"}
                   width="10em"
