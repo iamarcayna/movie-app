@@ -1,4 +1,4 @@
-# Movie Application
+# [Gallery] Movie Application
 
 ## Description
 This is a simple movie application that utilizes the Material UI library to provide a user-friendly interface. The application allows users to watch movie trailers and rate movies based on their preferences.
@@ -26,7 +26,7 @@ To run the Movie Application locally, follow these steps:
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/movie-app.git
+git clone https://github.com/iamarcayna/movie-app.git
 ```
 
 2. Navigate to the project directory:
