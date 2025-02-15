@@ -10,6 +10,10 @@ The Movie Application offers the following features:
 
 2. Rate Movies: Users have the ability to rate movies based on their personal opinions and preferences. This feature enables users to share their thoughts and contribute to the movie's overall rating.
 
+## Previews
+![Desktop View](https://portfolio-iamarcayna.vercel.app/assets/images/project_2.jpg)
+![Mobile View](https://portfolio-iamarcayna.vercel.app/assets/images/project_2-mobile-1.jpg) ![Mobile View](https://portfolio-iamarcayna.vercel.app/assets/images/project_2-mobile-2.jpg) ![Mobile View](https://portfolio-iamarcayna.vercel.app/assets/images/project_2-mobile-3.jpg)
+
 ## Try It Out!
 To experience the Movie Application, you can visit the live deployment at the following URL: [https://movie-app-iamarcayna.vercel.app/](https://movie-app-iamarcayna.vercel.app/)
 
