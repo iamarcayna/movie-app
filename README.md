@@ -12,6 +12,7 @@ The Movie Application offers the following features:
 
 ## Previews
 ![Desktop View](https://portfolio-iamarcayna.vercel.app/assets/images/project_2.jpg)
+
 ![Mobile View](https://portfolio-iamarcayna.vercel.app/assets/images/project_2-mobile-1.jpg) ![Mobile View](https://portfolio-iamarcayna.vercel.app/assets/images/project_2-mobile-2.jpg) ![Mobile View](https://portfolio-iamarcayna.vercel.app/assets/images/project_2-mobile-3.jpg)
 
 ## Try It Out!
